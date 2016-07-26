@@ -1,0 +1,55 @@
+@mixin bg-cover($path)
+  background-image: url($path)
+
+  .bgsizecover &
+    background-size: cover
+
+  .no-bgsizecover &
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path_relative_to_the_HTML_file', sizingMethod='scale')"
+
+=pad-lr
+  padding-left: 10px
+  padding-right: 10px
+
+=clearfix
+  &:after
+    content: ""
+    display: block
+    clear: both
+
+@mixin slide($index, $path, $h-color, $p-color)
+  +bg-cover($path)
+
+  z-index: $index
+  padding: 70px 40px 20px 40px
+  height: 60vh
+  min-height: 250px
+
+  h1
+    color: $h-color
+    margin: 0
+
+    span
+      text-transform: uppercase
+
+  p
+    margin: 0
+    color: $p-color
+    font-size: 3em
+
+=social-logo($top)
+  overflow: hidden
+  display: block
+  position: relative
+  height: 60px
+  padding: 20px 0 20px 90px
+
+  img
+    position: absolute
+    top: $top
+    left: 20px
+
+  span
+    color: #fff
+    font-size: 1.5em
+    line-height: 0.5
