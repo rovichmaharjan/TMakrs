@@ -10,7 +10,8 @@ h2 { font-size: 3.2em; margin: 0; }
 
 p { font-size: 1.5em; }
 
-.cta { display: inline-block; text-align: center; padding: 8px 10px; border: 2px solid currentColor; border-radius: 5px; text-transform: uppercase; letter-spacing: 0.3em; font-size: 1.3em; -webkit-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+.cta { display: inline-block; text-align: center; padding: 8px 10px; border: 2px solid currentColor; text-transform: uppercase; letter-spacing: 0.3em; font-size: 1.3em; -webkit-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+.borderradius .cta { border-radius: 5px; }
 .cta:hover { background-color: white; color: #359300; }
 
 .cta-secondary { color: #eeffc5; }
@@ -18,7 +19,8 @@ p { font-size: 1.5em; }
 
 .show-menu { -webkit-transform: scaleY(1) !important; -ms-transform: scaleY(1) !important; transform: scaleY(1) !important; }
 
-.container { margin: 0 auto; max-width: 960px; overflow: hidden; }
+.container { margin: 0 auto; max-width: 960px; min-width: 300px; overflow: hidden; }
+@media (min-width: 960px) { .container { border: 1px solid rgba(128, 128, 128, 0.23); } }
 .container header { position: relative; }
 .container header nav { position: absolute; top: 0; left: 0; right: 0; height: 50px; background-image: url("../Images/nav-bg.png"); padding: 5px 5px 0 10px; z-index: 10; }
 .container header nav:after { content: ""; display: block; clear: both; }
@@ -77,7 +79,9 @@ p { font-size: 1.5em; }
 .container .p-p .products p { color: white; }
 .container .p-p .products p span { display: block; font-size: 1.3em; line-height: 1.8; }
 .container .p-p .partners { width: 50%; float: right; padding: 30px 0; }
-.container .p-p .partners:before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; z-index: -1; width: 50%; background-image: url(../Images/restaurant-bg.jpg); background-position: center; background-repeat: no-repeat; -webkit-background-size: cover; background-size: cover; }
+.container .p-p .partners:before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; z-index: -1; width: 50%; background-image: url("../Images/restaurant-bg.jpg"); background-position: center; background-repeat: no-repeat; }
+.bgsizecover .container .p-p .partners:before { -webkit-background-size: cover; background-size: cover; }
+.no-bgsizecover .container .p-p .partners:before { -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path_relative_to_the_HTML_file', sizingMethod='scale')"; }
 .container .p-p .partners p { color: #edf510; font-size: 3.5em; text-align: right; padding: 10px; position: relative; }
 .container .p-p .partners p:first-child:after { content: "54"; color: rgba(255, 255, 255, 0.55); position: absolute; top: 0; right: 10px; font-size: 3.9em; }
 .container .p-p .partners p span { text-transform: uppercase; }
