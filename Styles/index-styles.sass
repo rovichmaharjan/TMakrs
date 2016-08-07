@@ -20,7 +20,7 @@
       right: 0
       height: 50px
       +bg-cover('../Images/nav-bg.png')
-      padding: 5px 5px 0 10px
+      padding: 5px 5px 0 20px
       z-index: 10
 
       a
@@ -39,7 +39,7 @@
       .hamburger
         display: none
         float: right
-        padding: 10px
+        padding: 10px 20px
         font-size: 1.4em
         text-transform: uppercase
         letter-spacing: 0.3em
@@ -56,7 +56,7 @@
         li
           display: inline-block
           vertical-align: middle
-          padding: 0px 10px
+          +pad-lr
           font-size: 0.8em
           text-transform: uppercase
           letter-spacing: 0.3em
@@ -112,7 +112,7 @@
   .first-bar
     +clearfix
 
-    padding: 50px 10px
+    padding: 50px 20px
 
     .desc
       width: 67%
@@ -140,7 +140,7 @@
         margin: 5px 0 10px 10px
 
   .second-bar
-    padding: 50px 10px
+    padding: 50px 20px
     background-color: $second-tag-bg
 
     +clearfix
@@ -183,7 +183,7 @@
     .products
       width: 50%
       float: left
-      padding: 30px 10px
+      padding: 30px 20px
       text-align: center
 
       &:before
@@ -230,7 +230,7 @@
         color: $partners-text
         font-size: 3.5em
         text-align: right
-        padding: 10px
+        padding: 10px 20px
         position: relative
 
         &:first-child
@@ -271,7 +271,7 @@
 
     .testimonials
       width: 67%
-      padding: 40px 10px
+      padding: 40px 20px
       float: left
 
       .t
@@ -288,7 +288,7 @@
           float: left
           margin-top: 0
           margin-bottom: 0
-          padding: 0 10px
+          +pad-lr
 
           &:nth-child(2)
             padding-top: 10px
@@ -360,7 +360,7 @@
     .locate
       float: left
       width: 33%
-      padding: 10px 10px 35px 10px
+      padding: 10px 20px 35px 20px
       color: $locatet-text
       font-size: 1.7em
       text-align: center
@@ -377,7 +377,7 @@
 
     .contact
       float: right
-      padding: 20px 10px 40px 10px
+      padding: 20px 20px 40px 20px
       width: 67%
       font-size: 1.2em
       color: $contact-text
